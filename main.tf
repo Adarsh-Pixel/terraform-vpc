@@ -1,5 +1,5 @@
 module "vpc" {
-    source = "git::https://github.com/Adarsh-Pixel/tf-module-vpc.git?ref=main"
+    source = "./vendor/modules/vpc"
 }
 
 # We cannot parameterize anything that is added in the source
