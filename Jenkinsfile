@@ -3,6 +3,10 @@ pipeline{
     options {
         ansiColor('xterm')
     }
+    parameters {
+        choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Select your Environment')     
+        choice(name: 'Action', choices: ['apply', 'destroy'], description: 'Select your Action') 
+    }
     stages{
         stage("Terraform Init"){
             steps{
@@ -18,9 +22,9 @@ pipeline{
             }
 
         }
-        stage("Terraform Apply"){
+        stage("Terraform Action"){
             steps{
-                sh "terraform apply -auto-approve -var-file=env-${ENV}/${ENV}.tfvars"
+                sh "terraform ${Action} -auto-approve -var-file=env-${ENV}/${ENV}.tfvars"
             }
 
         }
