@@ -1,5 +1,6 @@
 module "vpc" {
-    source = "./vendor/modules/vpc"
+    source      = "./vendor/modules/vpc"
+    VPC_CIDR    = var.VPC_CIDR
 }
 
 # We cannot parameterize anything that is added in the source
