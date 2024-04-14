@@ -6,3 +6,6 @@ variable "PRIVATE_SUBNET_CIDR" {}
 variable "DEFAULT_VPC_ID" {}
 variable "DEFAULT_VPC_CIDR" {}
 variable "DEFAULT_VPC_RT" {}
+variable "PRIVATE_SUBNET_IDS" {}
+variable "PUBLIC_SUBNET_IDS" {}
+variable "VPC_ID" {}
