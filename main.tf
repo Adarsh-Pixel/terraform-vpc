@@ -8,7 +8,6 @@ module "vpc" {
     DEFAULT_VPC_ID      = var.DEFAULT_VPC_ID
     DEFAULT_VPC_CIDR    = var.DEFAULT_VPC_CIDR
     DEFAULT_VPC_RT      = var.DEFAULT_VPC_RT
-    PRIVATE_SUBNET_IDS  = var.PRIVATE_SUBNET_IDS
 }
 
 # We cannot parameterize anything that is added in the source
